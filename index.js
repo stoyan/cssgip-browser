@@ -49,13 +49,13 @@ export default function(img, debug) {
 
   const furthest = Math.max.apply(null, distances);
   const idx = distances.findIndex((el, idx) => el === furthest);
-  const gradient = `linear-gradient(${directions[idx]}, ${toHex(colors[idx][0])} 0%, ${toHex(colors[idx][1])} 100%)`;
+  const gradient = `linear-gradient(${directions[idx]}, ${toHex(colors[idx][0])} 0%, ${toHex(colors[idx][1])} 100%);`;
   
   if (debug) {
     const res = [];
     res.push(background);
     res.push(gradient);
-    const pretty = `linear-gradient(\n  ${directions[idx]},\n  ${toHex(colors[idx][0])} 0%,\n  ${toHex(colors[idx][1])} 100%\n)`;
+    const pretty = `linear-gradient(\n  ${directions[idx]},\n  ${toHex(colors[idx][0])} 0%,\n  ${toHex(colors[idx][1])} 100%\n);`;
     return {
       css: res,
       palettes: {
@@ -91,6 +91,6 @@ function getDistance(rgb1, rgb2) {
   return Math.sqrt(
     Math.pow(rgb2[0] - rgb1[0], 2),
     Math.pow(rgb2[1] - rgb1[1], 2),
-    Math.pow(rgb2[2] - rgb1[2], 2),
+    Math.pow(rgb2[2] - rgb1[2], 2)
   );
 }
