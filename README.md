@@ -2,7 +2,7 @@
 
 Gradient Image Placeholders.
 
-This is a browser version of the CSSGIP module (https://www.npmjs.com/package/cssgip) and source (https://github.com/stoyan/cssgip/)
+This is a browser version of the CSSGIP module https://www.npmjs.com/package/cssgip and source https://github.com/stoyan/cssgip/
 
 ## Purpose
 
@@ -23,7 +23,7 @@ For a simpler demo, see demo.html in the `build/` directory
 
 In a non-module environment, include the `gip.js` file found in the `build/` directory and use the global function `gip()`:
 
-```
+```html
 <script src="gip.js"></script>
 <script>
 // img is a reference to an image element
@@ -35,7 +35,7 @@ So `img` can be an object created with `new Image()` or `document.createElement(
 
 ### Import
 
-```
+```js
 import gip from 'cssgip-browser';
 const result = gip(img);
 ```
@@ -44,7 +44,7 @@ const result = gip(img);
 
 The object returned by `gip(img)` has three properties, like so:
 
-```
+```js
 css: "background: #ab9f92; background: linear-gradient(135deg, #cbc6c2 0%, #5d5347 100%)"
 background: "#ab9f92"
 gradient: "linear-gradient(135deg, #cbc6c2 0%, #5d5347 100%)"
@@ -54,7 +54,7 @@ gradient: "linear-gradient(135deg, #cbc6c2 0%, #5d5347 100%)"
 
 If you want to play around with the tool and make it better, you can see more detailed data as to how we got the end result. Calling `gip(img, true)` spits out debugging palettes.
 
-```
+```js
 css: (2) […]
   0: "#ab9f92"
 ​​  1: "linear-gradient(135deg, #cbc6c2 0%, #5d5347 100%)"
