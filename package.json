@@ -1,0 +1,27 @@
+{
+  "name": "cssgip-browser",
+  "version": "0.0.1",
+  "description": "Gradient Image Placeholders, browser version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stoyan/cssgip-browser"
+  },
+  "keywords": [
+    "css",
+    "gradients",
+    "image",
+    "placeholder",
+    "performance",
+    "browser"
+  ],
+  "author": "Stoyan Stefanov",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "esmify": "^2.0.0"
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GIP-in-the-browser demo</title>
+    <script src="gip.js"></script>
+  </head>
+  <body>
+  <div id="div" style="width: 400px; height: 300px;"></div>
+  <script>
+    const img = new Image();
+    img.src='tk-hammonds-743192-unsplash.jpg';
+    img.onload = () => {
+      // default
+      const res = gip(img);
+      console.log('## default ##');
+      console.log(res);
+      // show in the browser
+      img.width = 400;
+      document.body.appendChild(img);
+      div.style.cssText += res.css;
+      // debuging info
+      console.log('## debug ##');
+      console.log(gip(img, true));
+      
+    }
+  </script>
+  <p>Photo by <a href="https://unsplash.com/photos/DSjILstcB78">TK Hammonds on Unsplash</a></a>
+  </body>
+</html>
