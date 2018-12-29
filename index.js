@@ -49,7 +49,7 @@ export default function(img, debug) {
 
   const furthest = Math.max.apply(null, distances);
   const idx = distances.findIndex((el, idx) => el === furthest);
-  const gradient = `linear-gradient(${directions[idx]}, ${toHex(colors[idx][0])} 0%, ${toHex(colors[idx][1])} 100%);`;
+  const gradient = `linear-gradient(${directions[idx]}, ${toHex(colors[idx][0])} 0%, ${toHex(colors[idx][1])} 100%)`;
   
   if (debug) {
     const res = [];
